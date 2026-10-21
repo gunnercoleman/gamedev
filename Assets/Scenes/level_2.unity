@@ -119,6 +119,41 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &65414624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 65414625}
+  m_Layer: 0
+  m_Name: Pumpkins
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &65414625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65414624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.40332, y: 24.053, z: 165.95767}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 114876870}
+  - {fileID: 1887928437}
+  - {fileID: 692965962}
+  - {fileID: 1797279151}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105769804
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +265,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5bb1fa0fd66c9544b52e75d5b9f1fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotator
+  rotate: 1
   degreesPerSecond: 90
+  bob: 1
+  bobHeight: 0.25
+  bobSpeed: 1
+  randomiseStart: 1
 --- !u!114 &114876868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,25 +285,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   collectSound: {fileID: 8300000, guid: e109426266b224743b0cf880efc6e78b, type: 3}
   volume: 1
+--- !u!4 &114876870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3604964366006949053, guid: e8e3abd6f4c87ee48abfbb25c8ecd64e, type: 3}
+  m_PrefabInstance: {fileID: 580357128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &124329393
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 65414625}
     m_Modifications:
     - target: {fileID: 5916105227947158549, guid: 41149394d4720ef4a8636b885aa227fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 136.92212
+      value: -114.4812
       objectReference: {fileID: 0}
     - target: {fileID: 5916105227947158549, guid: 41149394d4720ef4a8636b885aa227fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.006767
+      value: -4.046232
       objectReference: {fileID: 0}
     - target: {fileID: 5916105227947158549, guid: 41149394d4720ef4a8636b885aa227fe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 122.469215
+      value: -43.488457
       objectReference: {fileID: 0}
     - target: {fileID: 5916105227947158549, guid: 41149394d4720ef4a8636b885aa227fe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -295,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6436183662209758895, guid: 41149394d4720ef4a8636b885aa227fe, type: 3}
       propertyPath: m_Name
-      value: SM_Pumpkin01
+      value: Pumpkin2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -504,7 +549,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -547,7 +592,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 10041
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -687,19 +732,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 65414625}
     m_Modifications:
     - target: {fileID: 3604964366006949053, guid: e8e3abd6f4c87ee48abfbb25c8ecd64e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 126.233284
+      value: -125.17004
       objectReference: {fileID: 0}
     - target: {fileID: 3604964366006949053, guid: e8e3abd6f4c87ee48abfbb25c8ecd64e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.022308
+      value: -4.030691
       objectReference: {fileID: 0}
     - target: {fileID: 3604964366006949053, guid: e8e3abd6f4c87ee48abfbb25c8ecd64e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 118.53401
+      value: -47.42366
       objectReference: {fileID: 0}
     - target: {fileID: 3604964366006949053, guid: e8e3abd6f4c87ee48abfbb25c8ecd64e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -731,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4128876517809278471, guid: e8e3abd6f4c87ee48abfbb25c8ecd64e, type: 3}
       propertyPath: m_Name
-      value: SM_Pumpkin03
+      value: Pumpkin1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -833,7 +878,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5bb1fa0fd66c9544b52e75d5b9f1fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotator
+  rotate: 1
   degreesPerSecond: 90
+  bob: 1
+  bobHeight: 0.25
+  bobSpeed: 1
+  randomiseStart: 1
 --- !u!114 &692965960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +898,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   collectSound: {fileID: 8300000, guid: e109426266b224743b0cf880efc6e78b, type: 3}
   volume: 1
+--- !u!4 &692965962 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+  m_PrefabInstance: {fileID: 1455597610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &728513415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1219,6 +1274,133 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiniMapFollow
   player: {fileID: 2006841802}
   height: 100
+--- !u!1 &1115960873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115960876}
+  - component: {fileID: 1115960875}
+  - component: {fileID: 1115960874}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1115960874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115960873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &1115960875
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115960873}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 0.90943396, g: 0.6476965, b: 0.19046637, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &1115960876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115960873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.37506735, y: -0.07596749, z: 0.18340176, w: 0.9054928}
+  m_LocalPosition: {x: 134.18007, y: 22.43, z: 120.17117}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 22.9}
 --- !u!1 &1145625197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,15 +1514,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 150
+      value: 115.58
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20
+      value: 70.2
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 150
+      value: 256.31
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1382,37 +1564,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2006841795}
   m_SourcePrefab: {fileID: 100100000, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
---- !u!1 &1336833691
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1336833692}
-  m_Layer: 0
-  m_Name: Pumpkins
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1336833692
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336833691}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 140.36813, y: 22.20159, z: 144.75967}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370020795 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
@@ -1424,19 +1575,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 65414625}
     m_Modifications:
     - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 127.67346
+      value: -123.72986
       objectReference: {fileID: 0}
     - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.015425
+      value: -4.037575
       objectReference: {fileID: 0}
     - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 127.27484
+      value: -38.68283
       objectReference: {fileID: 0}
     - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1468,7 +1619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4258929507088768119, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
       propertyPath: m_Name
-      value: SM_Pumpkin04
+      value: Pumpkin3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1481,6 +1632,111 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 692965959}
   m_SourcePrefab: {fileID: 100100000, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+--- !u!1001 &1569459752
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 65414625}
+    m_Modifications:
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.009674072
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00399971
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0073242188
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9659258
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.2588191
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258929507088768119, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      propertyPath: m_Name
+      value: Pumpkin4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4258929507088768119, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1797279153}
+    - targetCorrespondingSourceObject: {fileID: 4258929507088768119, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1797279152}
+  m_SourcePrefab: {fileID: 100100000, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+--- !u!1 &1797279150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4258929507088768119, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+  m_PrefabInstance: {fileID: 1569459752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1797279151 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3481583223887414989, guid: d74eb2546929c634eb8383fce60d7ad1, type: 3}
+  m_PrefabInstance: {fileID: 1569459752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1797279152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797279150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5bb1fa0fd66c9544b52e75d5b9f1fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotator
+  rotate: 1
+  degreesPerSecond: 90
+  bob: 1
+  bobHeight: 0.25
+  bobSpeed: 1
+  randomiseStart: 1
+--- !u!114 &1797279153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797279150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e8b215c5471ea40ba45b697d9f2073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  collectSound: {fileID: 8300000, guid: e109426266b224743b0cf880efc6e78b, type: 3}
+  volume: 1
 --- !u!1 &1887928432 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6436183662209758895, guid: 41149394d4720ef4a8636b885aa227fe, type: 3}
@@ -1498,7 +1754,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5bb1fa0fd66c9544b52e75d5b9f1fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rotator
+  rotate: 1
   degreesPerSecond: 90
+  bob: 1
+  bobHeight: 0.25
+  bobSpeed: 1
+  randomiseStart: 1
 --- !u!114 &1887928435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1513,6 +1774,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   collectSound: {fileID: 8300000, guid: e109426266b224743b0cf880efc6e78b, type: 3}
   volume: 1
+--- !u!4 &1887928437 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5916105227947158549, guid: 41149394d4720ef4a8636b885aa227fe, type: 3}
+  m_PrefabInstance: {fileID: 124329393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1944052287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1829,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bad1edb2ff5214c86f2b6d7bf4f2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
+  pumpkinText: {fileID: 1944052290}
+  pumpkinsRequired: 10
+  levelCompletePanel: {fileID: 0}
 --- !u!114 &1944052290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,10 +1972,8 @@ SceneRoots:
   - {fileID: 1225696310}
   - {fileID: 731086854}
   - {fileID: 728513415}
-  - {fileID: 1336833692}
   - {fileID: 1045962484}
   - {fileID: 512053702}
   - {fileID: 1145625201}
-  - {fileID: 580357128}
-  - {fileID: 124329393}
-  - {fileID: 1455597610}
+  - {fileID: 65414625}
+  - {fileID: 1115960876}
