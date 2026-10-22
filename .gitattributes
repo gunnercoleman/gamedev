@@ -1,0 +1,4 @@
+New?Terrain*.asset filter=lfs diff=lfs merge=lfs -text
+TerrainData_*.asset filter=lfs diff=lfs merge=lfs -text
+*.terrain.asset filter=lfs diff=lfs merge=lfs -text
+MyTerrain.asset filter=lfs diff=lfs merge=lfs -text

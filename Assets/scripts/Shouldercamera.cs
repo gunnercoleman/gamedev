@@ -68,7 +68,7 @@ public class ShoulderCamera : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else if (lockCursor && LeftClickPressed() && Cursor.lockState != CursorLockMode.Locked)
+        else if (lockCursor && Time.timeScale > 0f && LeftClickPressed() && Cursor.lockState != CursorLockMode.Locked)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
