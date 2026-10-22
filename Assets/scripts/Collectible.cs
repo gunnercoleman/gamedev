@@ -4,6 +4,7 @@ public class Collectible : MonoBehaviour
 {
     [SerializeField] AudioClip collectSound;
     [SerializeField] float volume = 1f;
+    [SerializeField] GameObject collectEffect;
 
     ScoreManager scoreManager;
 
@@ -30,6 +31,12 @@ public class Collectible : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(collectSound, transform.position, volume);
         }
+
+        if (collectEffect != null)
+        {
+            Instantiate(collectEffect, transform.position, collectEffect.transform.rotation);
+        }
+
 
         gameObject.SetActive(false);
     }
